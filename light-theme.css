@@ -43,6 +43,10 @@ body {
     color: var(--black);
 }
 
+hr{
+    border: 1px solid var(--black);
+}
+
 .control {
     text-align: right;
 }
@@ -61,7 +65,6 @@ body {
     padding: 0.5rem;
     display: inline-block;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .toggle_input {

@@ -34,11 +34,11 @@
 header {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: var(--black);
+    color: var(--dm-green);
 }
 
 body {
-    background-color: var(--dark-gray);
+    background-color: var(--black);
     font-family: 'Ubuntu', sans-serif;
     color: var(--silver);
 }
@@ -61,7 +61,6 @@ body {
     padding: 0.5rem;
     display: inline-block;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .toggle_input {
@@ -98,4 +97,8 @@ body {
 
 .toggle_input:checked~.toggle_fill::after {
     transform: translateX(var(--height));
+}
+
+.content{
+    text-align: justify;
 }
