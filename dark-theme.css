@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Ubuntu:wght@300;400;500&display=swap');
+
+/* dm = dark mode colours */
+:root {
+    --blue: rgb(0, 122, 255);
+    --dm-blue: rgb(10, 132, 255);
+    --green: rgb(52, 199, 89);
+    --dm-green: rgb(48, 209, 88);
+    --indigo: rgb(88, 86, 214);
+    --dm-indigo: rgb(94, 92, 230);
+    --orange: rgb(255, 149, 0);
+    --dm-orange: rgb(255, 159, 10);
+    --pink: rgb(255, 45, 85);
+    --dm-pink: rgb(255, 55, 95);
+    --red: rgb(255, 59, 48);
+    --dm-red: rgb(255, 69, 58);
+    --teal: rgb(90, 200, 250);
+    --dm-teal: rgb(100, 210, 255);
+    --yellow: rgb(255, 204, 0);
+    --dm-yellow: rgb(255, 214, 10);
+    --gray: rgb(174, 174, 178);
+    --dm-gray: rgb(99, 99, 102);
+    --white: rgb(242, 242, 247);
+    --black: rgb(28, 28, 30);
+    --silver: rgb(229, 229, 234);
+    --dark-gray: rgb(44, 44, 46);
+}
+
+.main-container {
+    max-width: 75vw;
+    margin: 10vh auto;
+}
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: var(--black);
+}
+
+body {
+    background-color: var(--dark-gray);
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--silver);
+}
+
+.control {
+    text-align: right;
+}
+
+.toggle {
+    --width: 2rem;
+    --height: calc(var(--width)/2);
+    --border-radius: calc(var(--height)/2);
+
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+}
+
+#toggle_label {
+    padding: 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle_input {
+    display: none;
+}
+
+.toggle_fill {
+    top: 0.15rem;
+    display: inline-block;
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: var(--gray);
+    transition: 250ms;
+}
+
+.toggle_fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: 250ms;
+}
+
+.toggle_input:checked~.toggle_fill {
+    background-color: var(--green);
+}
+
+.toggle_input:checked~.toggle_fill::after {
+    transform: translateX(var(--height));
+}
