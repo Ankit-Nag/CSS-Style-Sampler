@@ -3,6 +3,7 @@ var theme = document.querySelector("#theme_link");
 var borderRadius = document.querySelector("#border-radius");
 var borderThickness = document.querySelector("#border-thickness");
 var borderColour = document.querySelector("#border-colour");
+var shape = document.querySelector(".shape");
 const currentTheme = localStorage.getItem("theme");
 
 var userTheme;
@@ -29,8 +30,7 @@ function toggleTheme() {
 }
 
 function adjustRadius(){
-    console.log(borderRadius.value);
-    
+    shape.style.borderRadius= borderRadius.value+"%";
 }
 
 function changeColour(){
