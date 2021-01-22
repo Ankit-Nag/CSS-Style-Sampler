@@ -34,7 +34,7 @@
 header {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: var(--dm-green);
+    color: var(--dm-blue);
 }
 
 body {
@@ -92,7 +92,7 @@ body {
 }
 
 .toggle_input:checked~.toggle_fill {
-    background-color: var(--green);
+    background-color: var(--dm-green);
 }
 
 .toggle_input:checked~.toggle_fill::after {
