@@ -123,8 +123,8 @@ hr{
     width: 150px;
     height: 150px;
     background-color: var(--orange);
-    border-radius: 25%;
-    border: 0px solid var(--black);
+    border-radius: 0%;
+    border: 1px solid var(--black);
 }
 
 .input-box{
