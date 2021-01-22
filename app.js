@@ -34,11 +34,12 @@ function adjustRadius(){
 }
 
 function changeColour(){
-    console.log(borderColour.value);
+    shape.style.borderColor= borderColour.value;
 }
 
 function adjustThickness(){
     console.log(borderThickness.value);
+    shape.style.borderWidth= borderThickness.value+"px";
 }
 
 borderRadius.addEventListener("input",adjustRadius);
