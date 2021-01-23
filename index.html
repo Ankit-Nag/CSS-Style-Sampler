@@ -29,14 +29,21 @@
         <hr />
         <div class="shape-container">
             <div class="shape-controls">
-                <label>Border Radius (%): </label><input class="input-box" id="border-radius" type="number" max="50"
-                    min="0" placeholder="Border Radius in %"><br />
-                <label>Border Thickness (px): </label><input class="input-box" id="border-thickness" type="number"
-                    placeholder="Border Thickness in px" max="25"><br />
-                <label>Border Colour (HEX): </label><input class="input-box" id="border-colour"
-                    placeholder="Border Colour in HEX" type="color">
+                <div class="label"><label>Border Radius: </label><br />
+                    <label>Border Thickness: </label><br />
+                    <label>Border Colour: </label>
+                </div>
+                <div class="inputs"><input class="input-box" id="border-radius" type="number" max="50" min="0"
+                        placeholder="Border Radius in %">
+                    <input class="input-box" id="border-thickness" type="number" placeholder="Border Thickness in px"
+                        max="25" min="0"><br />
+                    <input class="input-box" id="border-colour" placeholder="Border Colour in HEX" type="color">
+                </div>
+
             </div>
-            <div class="example"><div class="shape"></div></div>
+            <div class="example">
+                <div class="shape"></div>
+            </div>
         </div>
     </div>
 

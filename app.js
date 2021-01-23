@@ -8,7 +8,6 @@ const currentTheme = localStorage.getItem("theme");
 
 var userTheme;
 
-
 if(currentTheme =="dark" ){
     theme.href = "/dark-theme.css";
     btnToggle.checked=true;

@@ -26,6 +26,10 @@
     --dark-gray: rgb(44, 44, 46);
 }
 
+::placeholder{
+    color: var(--dark-gray);
+}
+
 .main-container {
     max-width: 75vw;
     margin: 10vh auto;
@@ -35,12 +39,19 @@ header {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: var(--dm-blue);
+    transition: 250ms;
 }
 
 body {
     background-color: var(--black);
     font-family: 'Ubuntu', sans-serif;
     color: var(--silver);
+    transition: 250ms;
+}
+
+hr{
+    border: 1px solid var(--dm-gray);
+    transition: 250ms;
 }
 
 .control {
@@ -51,7 +62,6 @@ body {
     --width: 2rem;
     --height: calc(var(--width)/2);
     --border-radius: calc(var(--height)/2);
-
     display: inline-block;
     cursor: pointer;
     width: 100%;
@@ -93,6 +103,7 @@ body {
 
 .toggle_input:checked~.toggle_fill {
     background-color: var(--dm-green);
+    transition: 250ms;
 }
 
 .toggle_input:checked~.toggle_fill::after {
@@ -103,33 +114,73 @@ body {
     text-align: justify;
 }
 
+.shape-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .shape-controls{
-    display: inline-block;
-    min-width: 50vw;
-    margin: auto;
-    padding: 0.5rem;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    /* background-color: var(--blue); */
+    display: flex;
+    flex: 2;
+    margin: 1rem;
+    justify-content: space-evenly;
+}
+
+.label{
+    flex: 2;
+    line-height: 2.25rem;
+}
+
+.inputs{
+    flex: 1;
+}
+
+.example{
+    flex: 1;
 }
 
 .shape{
-    float: right;
-    margin-right: 1rem;
     width: 150px;
     height: 150px;
-    background-color: var(--orange);
+    background-color: var(--dm-green);
     border-radius: 0%;
-    border: 1px solid var(--black);
+    border: 1px solid black;
+    transition: 250ms;
 }
 
 .input-box{
     border: none;
-    float: right;
-    max-width: 25vw;
-    min-width: 150px;
+    width: 150px;
+    height: 2rem;
+    background-color: var(--gray);
+    border: 1px solid var(--black);
+    border-radius: 0.5rem;
+    transition: 250ms;
 }
 
 .input-box:focus{
     outline: none;
+    background-color: var(--silver);
+    box-shadow: 0px 0px 4px var(--dm-blue);
+    transition: 250ms;
 }
+
+.input-box:hover{
+    box-shadow: 0px 0px 3px var(--dm-blue);
+}
+
+#border-colour{
+    width: 2rem;
+    height: 2rem;
+    padding: 0px;
+    background: none;
+    border: none;
+    transition: 250ms;
+}
+
+#border-colour:focus{
+    box-shadow: 0px 0px 4px var(--dm-blue);
+}
+

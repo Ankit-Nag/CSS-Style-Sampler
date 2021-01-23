@@ -31,20 +31,27 @@
     margin: 10vh auto;
 }
 
+::placeholder{
+    color: var(--dark-gray);
+}
+
 header {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: var(--black);
+    transition: 250ms;
 }
 
 body {
     background-color: var(--silver);
     font-family: 'Ubuntu', sans-serif;
     color: var(--black);
+    transition: 250ms;
 }
 
 hr{
     border: 1px solid var(--black);
+    transition: 250ms;
 }
 
 .control {
@@ -97,6 +104,7 @@ hr{
 
 .toggle_input:checked~.toggle_fill {
     background-color: var(--green);
+    transition: 250ms;
 }
 
 .toggle_input:checked~.toggle_fill::after {
@@ -109,16 +117,25 @@ hr{
 
 .shape-container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .shape-controls{
+    display: flex;
     flex: 2;
-    min-width: 50vw;
-    margin: auto;
-    padding: 0.5rem;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin: 1rem;
+    justify-content: space-evenly;
+}
+
+.label{
+    flex: 2;
+    line-height: 2.25rem;
+}
+
+.inputs{
+    flex: 1;
 }
 
 .example{
@@ -130,17 +147,41 @@ hr{
     height: 150px;
     background-color: var(--orange);
     border-radius: 0%;
-    border: 1px solid var(--black);
+    border: 1px solid black;
+    transition: 250ms;
 }
-
-
 
 .input-box{
     border: none;
-    max-width: 25vw;
-    min-width: 150px;
+    width: 150px;
+    height: 2rem;
+    background-color: var(--gray);
+    border: 1px solid var(--dark-gray);
+    border-radius: 0.5rem;
+    transition: 250ms;
 }
 
 .input-box:focus{
     outline: none;
+    background-color: var(--green);
+    box-shadow: 0px 0px 4px var(--blue);
+    transition: 250ms;
+}
+
+.input-box:hover{
+    box-shadow: 0px 0px 3px var(--blue);
+}
+
+#border-colour{
+    width: 2rem;
+    height: 2rem;
+    
+    background: none;
+    border: none;
+    transition: 250ms;
+}
+
+#border-colour:focus{
+    box-shadow: 0px 0px 4px var(--blue);
+    background-color: var(--green);
 }
