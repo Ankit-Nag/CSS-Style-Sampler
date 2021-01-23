@@ -174,7 +174,6 @@ hr{
 #border-colour{
     width: 2rem;
     height: 2rem;
-    padding: 0px;
     background: none;
     border: none;
     transition: 250ms;
@@ -184,3 +183,15 @@ hr{
     box-shadow: 0px 0px 4px var(--dm-blue);
 }
 
+#fill-colour{
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    transition: 250ms;
+}
+
+#fill-colour:focus{
+    box-shadow: 0px 0px 4px var(--blue);
+    background-color: var(--green);
+}
