@@ -107,19 +107,25 @@ hr{
     text-align: justify;
 }
 
+.shape-container{
+    display: flex;
+    align-items: center;
+}
+
 .shape-controls{
-    display: inline-block;
+    flex: 2;
     min-width: 50vw;
     margin: auto;
     padding: 0.5rem;
     padding-top: 50px;
     padding-bottom: 50px;
-    /* background-color: var(--blue); */
+}
+
+.example{
+    flex: 1;
 }
 
 .shape{
-    float: right;
-    margin-right: 1rem;
     width: 150px;
     height: 150px;
     background-color: var(--orange);
@@ -127,9 +133,10 @@ hr{
     border: 1px solid var(--black);
 }
 
+
+
 .input-box{
     border: none;
-    float: right;
     max-width: 25vw;
     min-width: 150px;
 }
